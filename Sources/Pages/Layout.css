@@ -1,0 +1,142 @@
+﻿/* Define una paleta de colores personalizada */
+:root {
+    --primary-color: #483285; /* Color principal */
+    --secondary-color: #ffcc00; /* Color secundario */
+}
+body {
+    margin: 0; /* Elimina el margen por defecto en el cuerpo */
+    padding: 0; /* Elimina el espacio interior por defecto en el cuerpo */
+}
+/* Estilo del navbar */
+.navbar {
+    background-color: var(--primary-color); /* Usa el color principal como fondo */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-family: Arial, sans-serif; /* Cambia la fuente del navbar */
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s; /* Agrega una transición suave al color de los enlaces */
+}
+
+    .nav-link:hover {
+        color: var(--secondary-color); /* Cambia el color al pasar el cursor */
+    }
+
+/* Estilo del botón de login */
+.login-btn {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none; /* Elimina la subraya de los enlaces */
+    transition: background-color 0.3s, color 0.3s; /* Agrega transiciones suaves */
+}
+
+    .login-btn:hover {
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+/* Cambia el estilo del botón del menú desplegable */
+.navbar-toggler {
+    display: none;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 60px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    .navbar-brand {
+        margin-right: auto;
+    }
+
+    .navbar-nav {
+        order: 1;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-evenly;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+
+    .navbar-toggler {
+        display: block;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        order: 2;
+        margin-left: auto;
+    }
+
+    /* Estilo del menú desplegable */
+    .collapse {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+        .collapse.show {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .collapse.show .navbar-nav {
+                justify-content: center;
+            }
+
+            .collapse.show .nav-item {
+                width: 100%;
+                text-align: center;
+            }
+}
+
+
+

@@ -1,0 +1,110 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+}
+
+.content {
+    text-align: center;
+    background-color: #fff; /* Cambia el fondo del contenido a blanco */
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.publicidad-left {
+    float: left;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.publicidad-right {
+    float: right;
+    max-width: 50%;
+    margin-left: 20px;
+}
+
+.ImgYo {
+    width: 20%; /* Reduce el tamaño de la imagen */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.publicidad-section {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e6f7ff; /* Cambia el color de fondo a tu elección */
+    padding: 20px; /* Agrega espacio alrededor de la sección */
+}
+
+.nuevo-en-la-app {
+    background-color: #b3e0ff; /* Cambia el color de fondo a tu elección */
+    padding: 20px;
+    text-align: center;
+}
+
+.tutorial-button {
+    background-color: #007bff; /* Cambia el color de fondo a tu elección */
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #0056b3; /* Agrega un borde al botón */
+}
+
+/* Estilos para la Sección 2 */
+.desarrollada-por {
+    background-color: #BEDCFE; /* Cambia el color de fondo a tu elección */
+    padding: 20px;
+    text-align: center;
+}
+
+.app-developed-text {
+    color: #333; /* Cambia el color del texto a tu elección */
+}
+
+.creador-info {
+    margin-top: 20px; /* Agrega espacio entre el texto y la imagen */
+}
+
+/* Estilos para la imagen izquierda */
+.imgIzquierda {
+    float: right; /* Coloca la imagen a la derecha */
+    max-width: 300px; /* Establece el ancho deseado en píxeles */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+/* Estilos para la imagen derecha */
+.imgDerecha {
+    float: left; /* Coloca la imagen a la izquierda */
+    max-width: 300px; /* Establece el ancho deseado en píxeles */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+
+@media (max-width: 768px) {
+    .publicidad-container {
+        flex-direction: column; /* Apilar imágenes en dispositivos móviles */
+        align-items: center;
+    }
+
+    #Publicidad1, #Publicidad2 {
+        max-width: 100%; /* Ocupar todo el ancho en dispositivos móviles */
+        margin: 20px 0; /* Espaciado entre las imágenes en dispositivos móviles */
+    }
+}

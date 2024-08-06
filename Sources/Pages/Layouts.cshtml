@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #3f51b5;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+            .nav-link:hover {
+                color: #f50057;
+            }
+
+        /* Login button styles */
+        .login-btn {
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .login-btn:hover {
+                background-color: white;
+                color: #3f51b5;
+            }
+
+        /* Card styles */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-text {
+            font-size: 18px;
+            color: #3f51b5;
+        }
+
+        /* "Únete a nosotros" section styles */
+        h2 {
+            font-size: 36px;
+            color: #3f51b5;
+        }
+
+        p {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #3f51b5;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .btn-primary:hover {
+                background-color: #f50057;
+            }
+
+        /* Footer styles */
+        footer {
+            background-color: #f5f5f5;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Media query for small screens */
+        (max-width: 768px) {
+      
+
+        {
+            padding: 0 20px;
+            height: 60px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        .navbar-brand {
+            margin-right: auto;
+        }
+
+        .navbar-nav {
+            order: 1;
+            width: 100%;
+            margin-top: 10px;
+            justify-content: space-evenly;
+        }
+
+        .nav-link {
+            margin-left: 0;
+        }
+
+        .navbar-toggler {
+            display: block;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            order: 2;
+            margin-left: auto;
+        }
+
+        .collapse {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #3f51b5;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .collapse.show {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #3f51b5;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                padding: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+                .collapse.show .navbar-nav {
+                    justify-content: center;
+                }
+
+                .collapse.show .nav-item {
+                    width: 100%;
+                    text-align: center;
+                }
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                        <img src="~/Sources/Images/LOGOO.png" alt="Logo" height="40" />
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Sources/Pages/FrmRegistro.aspx">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link login-btn" href="~/Sources/Pages/FrmLogin.aspx">Login</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card m-2">
+                            <img src="~/Sources/Images/card1.jpg" alt="card" class="card-img-top">
+                            <div class="card-body">
+                                <p class="card-text">Consegui Tu primer trabajo facil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card m-2">
+                            <img src="~/Sources/Images/card2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Encontra el perfil que buscas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card m-2">
+                            <img src="~/Sources/Images/card4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">Mostra tus proyectos a la comunidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <div class="container">
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2>Únete a nosotros</h2>
+                            <p>¡Conéctate con profesionales de todo el mundo y aprovecha las oportunidades que ofrecemos!</p>
+                            <a href="~/Sources/Pages/FrmRegistro.aspx" class="btn btn-primary">Regístrate ahora</a>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#manualUsuarioModal">
+                                Manual de Usuario
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </section>
+    </main>
+
+
+
+    <div class="container body-content">
+
+        <hr />
+        <footer>
+            <p>Derechos reservados a Federico Leonel Bouzón</p>
+        </footer>
+    </div>
+
+    <div class="modal fade" id="manualUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="manualUsuarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="manualUsuarioModalLabel">Manual de Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pagina de Principal</h4>
+                    <img src="~/Sources/Images/Principal.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Es la pagina Principal de la Aplicacion, simplemente tiene unos botones arriba para ir al Login y al Register</p>
+                </div>
+
+
+                <div class="modal-body">
+                    <h4>Login</h4>
+                    <img src="~/Sources/Images/Login.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Pestaña donde el usuario debe ingresar Usuario Y contraseña e inciar Sesión y volver a para la pestaña anterior </p>
+
+                    <img src="~/Sources/Images/LoginRegister.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>En caso de no tener cuenta Puede seleccionar Donde dice Registrarse</p>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Registo</h4>
+                    <img src="~/Sources/Images/Register.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Pestaña donde los usuarios pueden crear su cuenta, insertando sus datos personale para poder iniciar sesion en la APP</p>
+                </div>
+
+
+                <div class="modal-body">
+                    <h4>Perfil</h4>
+                    <img src="~/Sources/Images/perfil.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>El usuario podrá visualizar su perfil con sus respectivos datos y podra cambiar algunos de sus datos.</p>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Pagina de Inicio</h4>
+                    <img src="~/Sources/Images/Inicio.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Una ves el usuario haya iniciado Sesión, Podria disfrutar de la maravillosa Aplicación, teniendo arriba una barra de navegación para desplazarse</p>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Buscando</h4>
+                    <img src="~/Sources/Images/buscando.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>En la pestaña Buscando se podran ver las propuestas que realizaron los usuarios de trabajo y además si tocas el boton   de cargar te llevara a que cargues tu propia propuesta de trabajo</p>
+                </div>
+                <div class="modal-body">
+                    <h4>Boton Cargar tu propuesta</h4>
+                    <img src="~/Sources/Images/CargarPropuesta.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Es en la pestaña donde se podrán cargar los datos de una empresa para poder buscar empleados.</p>
+                </div>
+                <div class="modal-body">
+                    <h4>Comunidad es donde se podrán visualizar los demás usuarios</h4>
+                    <img src="~/Sources/Images/comunidad.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>es donde se podrán visualizar los demás usuarios</p>
+                </div>
+
+
+
+                <div class="modal-body">
+                    <h4>Trabaja con nosotros</h4>
+                    <img src="~/Sources/Images/publicidad.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Se podrán visualizar los distintos planes para poder comprar una anuncio en la APP</p>
+                </div>
+
+
+                <div class="modal-body">
+                    <h4>Comprar</h4>
+                    <img src="~/Sources/Images/pagar.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Se podrá visualizar un formulario que llena los datos para que el usuario pueda efectuar la compra del anuncio que quiera y donde quiera Y se le generara un .PDF como comprobante de su compra</p>
+                </div>
+
+                <div class="modal-body">
+                    <h4>Factura</h4>
+                    <img src="~/Sources/Images/facturaEjemplo.png" alt="Manual de Usuario" class="img-fluid">
+
+                    <p>Comrprobante de que realizo la compra.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarToggler = document.querySelector(".navbar-toggler");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+            const bodyContent = document.querySelector(".body-content");
+            const originalMarginTop = window.getComputedStyle(bodyContent).marginTop;
+            let isNavbarOpen = false;
+
+            navbarToggler.addEventListener("click", function () {
+                isNavbarOpen = !isNavbarOpen;
+
+                if (isNavbarOpen) {
+                    bodyContent.style.marginTop = "160px"; // Ajusta este valor según tus necesidades
+                } else {
+                    bodyContent.style.marginTop = originalMarginTop;
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>
